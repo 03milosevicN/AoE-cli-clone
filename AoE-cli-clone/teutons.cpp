@@ -1,6 +1,10 @@
 #include <iostream>
 #include "teutons.h"
 #include <string>
+#include <thread>
+#include <chrono>
+
+#define SLEEP std::this_thread::sleep_for(std::chrono::seconds(1))
 
 std::string ASCII_teutons = R"""(
                                                                                           
@@ -51,9 +55,14 @@ std::string ASCII_teutons = R"""(
 )""";
 
 
+
 void teutons()
 {
     std::cout << ASCII_teutons << '\n';
 
-	std::cout << "This will contain civilization functionalities." << '\n';
+    SLEEP;
+   
+    std::cout << "Charlemagne's empire has fallen, and the task of rebuilding the Holy Roman Empire lies in your hands" << '\n';
+
+
 }
